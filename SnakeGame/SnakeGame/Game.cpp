@@ -1,9 +1,6 @@
 #include "Game.h"
-#include <string>
 
 using namespace std;
-
-SDL_Renderer* Game::renderer = nullptr;
 
 Game::Game() = default;
 Game::~Game()
@@ -27,12 +24,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		{
 			std::cout << "Window created!" << std::endl;
 		}
-		renderer = SDL_CreateRenderer(window, -1, 0);
-		if (renderer)
-		{
-			SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-			std::cout << "Renderer created!" << std::endl;
-		}
+		GlobalRenderer::CreateRenderer(window);
 		TTF_Init();
 
 		currentState = gameState::Running;
@@ -73,15 +65,15 @@ void Game::update()
 
 void Game::render()
 {
-	SDL_RenderClear(renderer);
+	SDL_RenderClear(GlobalRenderer::GetRenderer());
 
-	SDL_RenderPresent(renderer);
+	SDL_RenderPresent(GlobalRenderer::GetRenderer());
 }
 
 void Game::clean()
 {
 	SDL_DestroyWindow(window);
-	SDL_DestroyRenderer(renderer);
+	SDL_DestroyRenderer(GlobalRenderer::GetRenderer());
 	
 	TTF_Quit();
 	IMG_Quit();

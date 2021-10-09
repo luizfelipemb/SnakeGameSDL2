@@ -8,7 +8,7 @@
 
 // Image Settings
 #define GAME_BACKGROUND "assets/background.png"
-#define TILE_IMAGE "assets/tile.png"
+#define GROUND_IMAGE "assets/tile.png"
 #define SNAKE_IMAGE "assets/snake.png"
 
 // Font Settings

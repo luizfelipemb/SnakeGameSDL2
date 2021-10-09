@@ -1,5 +1,6 @@
 #pragma once
 #include "Configs.h"
+#include <iostream>
 
 class Board
 {

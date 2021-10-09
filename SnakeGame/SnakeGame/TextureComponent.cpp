@@ -1,21 +1,15 @@
 #include "TextureComponent.h"
-#include <iostream>
 
 using namespace std;
-
-TextureComponent::TextureComponent(SDL_Renderer* renderer, const char* fileName)
-{
-	texture = LoadTexture(renderer, fileName);
-}
 
 TextureComponent::~TextureComponent()
 {
 	SDL_DestroyTexture(texture);
 }
 
-SDL_Texture* TextureComponent::LoadTexture(SDL_Renderer* renderer, const char* texture)
+void TextureComponent::LoadTexture(SDL_Renderer* renderer, const char* textureDir)
 {
-	SDL_Surface* tempSurface = IMG_Load(texture);
+	SDL_Surface* tempSurface = IMG_Load(textureDir);
 	if (!tempSurface) {
 		printf("Texture Fail: %s\n", SDL_GetError());
 	}
@@ -26,7 +20,7 @@ SDL_Texture* TextureComponent::LoadTexture(SDL_Renderer* renderer, const char* t
 	}
 	SDL_FreeSurface(tempSurface);
 
-	return tex;
+	texture = tex;
 }
 void TextureComponent::Draw(SDL_Renderer* renderer, SDL_Rect* src, SDL_Rect* dest)
 {

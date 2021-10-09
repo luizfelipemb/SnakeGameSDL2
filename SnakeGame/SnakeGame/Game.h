@@ -4,8 +4,10 @@
 #include "SDL_image.h"
 #include "SDL_mixer.h"
 #include "SDL_ttf.h"
-#include <iostream>
 #include "Configs.h"
+#include "Singletons.h"
+#include <iostream>
+#include <string>
 
 
 class Game {
@@ -19,8 +21,6 @@ public:
 	void render();
 	void clean();
 	bool running();
-
-	static SDL_Renderer* renderer;
 
 private:
 	enum gameState{Idle,Running, Quit};
