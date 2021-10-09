@@ -23,4 +23,7 @@ void GlobalRenderer::ICreateRenderer(SDL_Window* window)
 		SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 		std::cout << "Renderer created!" << std::endl;
 	}
+	else {
+		std::cout << "Renderer not created! error!" << std::endl;
+	}
 }

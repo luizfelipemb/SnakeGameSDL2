@@ -18,12 +18,16 @@ void TextureComponent::LoadTexture(SDL_Renderer* renderer, const char* textureDi
 	{
 		printf("SDL_CreateTextureFromSurface Fail: %s\n", SDL_GetError());
 	}
+	else {
+		printf("SDL_CreateTexture Success!\n");
+	}
 	SDL_FreeSurface(tempSurface);
-
+	
 	texture = tex;
 }
 void TextureComponent::Draw(SDL_Renderer* renderer, SDL_Rect* src, SDL_Rect* dest)
 {
-	SDL_RenderCopy(renderer, texture, src, dest);
+	if(texture)
+		SDL_RenderCopy(renderer, texture, src, dest);
 }
 

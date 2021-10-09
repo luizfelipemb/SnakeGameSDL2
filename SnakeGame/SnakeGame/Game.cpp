@@ -28,6 +28,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		TTF_Init();
 
 		currentState = gameState::Running;
+		board.Setup();
 	}
 	else
 	{
@@ -60,13 +61,31 @@ void Game::handleEvents()
 
 void Game::update()
 {
-
+	switch (currentState)
+	{
+	case Game::Idle:
+		break;
+	case Game::Running:
+		board.Update();
+		break;
+	case Game::Quit:
+		break;
+	}
 }
 
 void Game::render()
 {
 	SDL_RenderClear(GlobalRenderer::GetRenderer());
-
+	switch (currentState)
+	{
+	case Game::Idle:
+		break;
+	case Game::Running:
+		board.Render();
+		break;
+	case Game::Quit:
+		break;
+	}
 	SDL_RenderPresent(GlobalRenderer::GetRenderer());
 }
 

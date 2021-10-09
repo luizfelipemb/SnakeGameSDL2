@@ -6,8 +6,10 @@
 #include "SDL_ttf.h"
 #include "Configs.h"
 #include "Singletons.h"
+#include "Board.h"
 #include <iostream>
 #include <string>
+
 
 
 class Game {
@@ -28,6 +30,7 @@ private:
 	gameState currentState;
 	SDL_Window* window;
 	int _width, _height;
+	Board board;
 };
 
 #endif /* Game_h */

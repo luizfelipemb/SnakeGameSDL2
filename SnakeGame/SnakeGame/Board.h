@@ -14,6 +14,6 @@ public:
 	void Render();
 	void Clean();
 private:
-	std::array<std::array<BoardTile, NUM_OF_COLUMN>,NUM_OF_ROW> boardTiles;
+	std::array<std::array<BoardTile, NUM_OF_XLINES>, NUM_OF_YLINES> boardTiles;
 };
 

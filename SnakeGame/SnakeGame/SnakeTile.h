@@ -4,7 +4,7 @@
 #include "Game.h"
 #include "Singletons.h"
 
-class SnakeTile final : BoardTile
+class SnakeTile final : public BoardTile
 {
 	SnakeTile();
 };

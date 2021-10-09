@@ -1,5 +1,6 @@
 #pragma once
 #include "TextureComponent.h"
+#include "Singletons.h"
 
 enum class boardTileType { Ground, Snake, Apple };
 
@@ -13,5 +14,9 @@ public:
 protected:
 	boardTileType type;
 	TextureComponent texture;
+private:
+	int positionX;
+	int positionY;
+	SDL_Rect srcRect, destRect;
 };
 

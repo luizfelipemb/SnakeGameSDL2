@@ -4,7 +4,7 @@
 #include "Game.h"
 #include "Singletons.h"
 
-class GroundTile final : BoardTile
+class GroundTile final : public BoardTile
 {
 public:
 	GroundTile();

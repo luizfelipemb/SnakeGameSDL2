@@ -19,8 +19,8 @@
 #define VOLUME 60
 
 // Board Settings
-#define NUM_OF_ROW 10
-#define NUM_OF_COLUMN 10
+#define NUM_OF_XLINES 10
+#define NUM_OF_YLINES 10
 #define SQUARE_SIZE 70
 
 // Game Settings
