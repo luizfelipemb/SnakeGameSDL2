@@ -157,6 +157,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="GroundTile.h" />
     <ClInclude Include="Singletons.h" />
+    <ClInclude Include="SnakeTile.h" />
     <ClInclude Include="TextureComponent.h" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +167,7 @@
     <ClCompile Include="GroundTile.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Singletons.cpp" />
+    <ClCompile Include="SnakeTile.cpp" />
     <ClCompile Include="TextureComponent.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
