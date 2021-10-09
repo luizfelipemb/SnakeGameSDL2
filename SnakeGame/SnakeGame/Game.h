@@ -18,13 +18,14 @@ public:
 	void update();
 	void render();
 	void clean();
-	bool running() { return isRunning; }
+	bool running();
 
 	static SDL_Renderer* renderer;
 
 private:
+	enum gameState{Idle,Running, Quit};
 	void MouseClick(SDL_MouseButtonEvent& b);
-	bool isRunning;
+	gameState currentState;
 	SDL_Window* window;
 	int _width, _height;
 };

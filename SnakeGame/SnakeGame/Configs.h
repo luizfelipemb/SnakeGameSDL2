@@ -6,12 +6,17 @@
 #define WINDOW_TITLE "Snake Game by Luiz Felipe Bustamante"
 #define WINDOW_FPS 60
 
-// Directory Settings
-#define FONT_DIRECTORY "assets/RetroGaming.ttf"
+// Image Settings
 #define GAME_BACKGROUND "assets/background.png"
-#define UIFONTSIZE 65
-#define VOLUME 60
+#define TILE_IMAGE "assets/tile.png"
+#define SNAKE_IMAGE "assets/snake.png"
 
+// Font Settings
+#define FONT_DIRECTORY "assets/RetroGaming.ttf"
+#define UIFONTSIZE 65
+
+// Audio Settings
+#define VOLUME 60
 
 // Board Settings
 #define NUM_OF_ROW 10

@@ -35,11 +35,11 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		}
 		TTF_Init();
 
-		isRunning = true;
+		currentState = gameState::Running;
 	}
 	else
 	{
-		isRunning = false;
+		currentState = gameState::Idle;
 	}
 	_width = width; _height = height;
 }
@@ -51,7 +51,7 @@ void Game::handleEvents()
 	switch (event.type)
 	{
 	case SDL_QUIT:
-		isRunning = false;
+		currentState = gameState::Quit;
 		break;
 	case SDL_MOUSEBUTTONDOWN:
 		break;
@@ -87,6 +87,15 @@ void Game::clean()
 	IMG_Quit();
 	SDL_Quit();
 	std::cout << "Game Cleaned!" << std::endl;
+}
+
+bool Game::running()
+{
+	if (currentState == gameState::Running)
+	{
+		return true;
+	}
+	return false;
 }
 
 void Game::MouseClick(SDL_MouseButtonEvent & b)
