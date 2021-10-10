@@ -1,6 +1,7 @@
 #include "Game.h"
 
 using namespace std;
+SDL_Renderer* Game::renderer = nullptr;
 
 Game::Game() = default;
 Game::~Game()
@@ -24,7 +25,12 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		{
 			std::cout << "Window created!" << std::endl;
 		}
-		GlobalRenderer::CreateRenderer(window);
+		renderer = SDL_CreateRenderer(window, -1, 0);
+		if (renderer)
+		{
+			SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+			std::cout << "Renderer created!" << std::endl;
+		}
 		TTF_Init();
 
 		currentState = gameState::Running;
@@ -34,6 +40,10 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 	{
 		currentState = gameState::Idle;
 	}
+	endBackground = new TextureComponent();
+	endBackground->LoadTexture(renderer,GAME_BACKGROUND);
+	endBGdestRect.w = width;
+	endBGdestRect.h = height;
 	_width = width; _height = height;
 }
 
@@ -75,7 +85,7 @@ void Game::update()
 
 void Game::render()
 {
-	SDL_RenderClear(GlobalRenderer::GetRenderer());
+	SDL_RenderClear(renderer);
 	switch (currentState)
 	{
 	case Game::Idle:
@@ -86,14 +96,15 @@ void Game::render()
 	case Game::Quit:
 		break;
 	}
-	SDL_RenderPresent(GlobalRenderer::GetRenderer());
+	//endBackground->Draw(renderer, nullptr, &endBGdestRect);
+	SDL_RenderPresent(renderer);
 }
 
 void Game::clean()
 {
 	SDL_DestroyWindow(window);
-	SDL_DestroyRenderer(GlobalRenderer::GetRenderer());
-	
+	SDL_DestroyRenderer(renderer);
+
 	TTF_Quit();
 	IMG_Quit();
 	SDL_Quit();

@@ -23,6 +23,7 @@ public:
 	void render();
 	void clean();
 	bool running();
+	static SDL_Renderer* renderer;
 
 private:
 	enum gameState{Idle,Running, Quit};
@@ -31,6 +32,8 @@ private:
 	SDL_Window* window;
 	int _width, _height;
 	Board board;
+	TextureComponent* endBackground;
+	SDL_Rect endBGdestRect;
 };
 
 #endif /* Game_h */

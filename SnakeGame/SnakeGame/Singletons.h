@@ -24,24 +24,3 @@ private:
 	int IGetRandomBetween(int first, int second);
 	unsigned int seed = time(nullptr);
 };
-
-class GlobalRenderer
-{
-public:
-	GlobalRenderer(const GlobalRenderer&) = delete;
-
-	void operator=(const GlobalRenderer&) = delete;
-
-	static GlobalRenderer& Get()
-	{
-		static GlobalRenderer instance;
-		return instance;
-	}
-	static SDL_Renderer* GetRenderer() { return Get().IGetRenderer(); }
-	static void CreateRenderer(SDL_Window* window){return Get().ICreateRenderer(window); }
-private:
-	GlobalRenderer() = default;
-	SDL_Renderer* IGetRenderer();
-	void ICreateRenderer(SDL_Window* window);
-	SDL_Renderer* renderer;
-};

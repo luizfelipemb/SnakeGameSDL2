@@ -1,4 +1,5 @@
 #include "BoardTile.h"
+#include "Game.h"
 
 BoardTile::BoardTile()
 {
@@ -25,5 +26,5 @@ void BoardTile::Update()
 
 void BoardTile::Render()
 {
-	texture.Draw(GlobalRenderer::GetRenderer(),&srcRect,&destRect);
+	texture.Draw(Game::renderer,&srcRect,&destRect);
 }
