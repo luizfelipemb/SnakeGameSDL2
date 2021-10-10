@@ -1,5 +1,7 @@
 #include "BoardTile.h"
 
+using namespace std;
+
 BoardTile::BoardTile()
 {
 

@@ -1,5 +1,4 @@
 #include "Board.h"
-#include "GroundTile.h"
 
 Board::Board()
 {
@@ -19,6 +18,9 @@ void Board::Setup()
 			boardTiles[y][x] = GroundTile();
 		}
 	}
+	background.LoadTexture(GlobalRenderer::GetRenderer(), GAME_BACKGROUND);
+	destbg.w = WINDOW_WIDTH;
+	destbg.h = WINDOW_HEIGHT;
 }
 
 void Board::Update()
@@ -27,6 +29,7 @@ void Board::Update()
 }
 void Board::Render()
 {
+	background.Draw(GlobalRenderer::GetRenderer(), nullptr, &destbg);
 	for (auto row : boardTiles)
 		for (auto tile : row)
 			tile.Render();

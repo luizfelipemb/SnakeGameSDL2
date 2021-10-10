@@ -7,7 +7,7 @@
 #define WINDOW_FPS 60
 
 // Image Settings
-#define GAME_BACKGROUND "assets/background.png"
+#define GAME_BACKGROUND "assets/background.jpeg"
 #define GROUND_IMAGE "assets/tile.png"
 #define SNAKE_IMAGE "assets/snake.png"
 
