@@ -21,8 +21,7 @@ void Board::Setup()
 			boardTiles[y][x] = GroundTile();
 		}
 	}
-	background = new TextureComponent();
-	background->LoadTexture(GlobalRenderer::GetRenderer(),SNAKE_IMAGE);
+	snaketexture = GlobalRenderer::LoadTexture(SNAKE_IMAGE);
 	bgend.w = WINDOW_WIDTH;
 	bgend.h = WINDOW_HEIGHT;
 	cout<<"setup done"<<endl;
@@ -31,13 +30,10 @@ void Board::Setup()
 void Board::Update()
 {
 	timer++;
-	if (timer<60)
-		background->LoadTexture(GlobalRenderer::GetRenderer(), SNAKE_IMAGE);
-	cout<<"board update"<<endl;
 }
 void Board::Render()
 {
-	background->Draw(GlobalRenderer::GetRenderer(),nullptr,&bgend);
+	GlobalRenderer::DrawTexture(snaketexture,nullptr,&bgend);
 	for (auto row : boardTiles)
 		for (auto tile : row)
 			tile.Render();

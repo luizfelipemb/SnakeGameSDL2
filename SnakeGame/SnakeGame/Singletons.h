@@ -39,9 +39,13 @@ public:
 	}
 	static SDL_Renderer* GetRenderer() { return Get().IGetRenderer(); }
 	static void CreateRenderer(SDL_Window* window){return Get().ICreateRenderer(window); }
+	static SDL_Texture* LoadTexture(const char* fileName){ return Get().ILoadTexture(fileName); }
+	static void DrawTexture(SDL_Texture* texture, SDL_Rect* src, SDL_Rect* dest){ return Get().IDrawTexture(texture,src,dest); };
 private:
 	GlobalRenderer() = default;
 	SDL_Renderer* IGetRenderer();
 	void ICreateRenderer(SDL_Window* window);
+	SDL_Texture* ILoadTexture(const char* fileName);
+	void IDrawTexture(SDL_Texture* texture, SDL_Rect* src, SDL_Rect* dest);
 	SDL_Renderer* renderer;
 };
