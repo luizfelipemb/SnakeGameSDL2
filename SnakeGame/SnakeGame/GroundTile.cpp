@@ -3,5 +3,5 @@
 GroundTile::GroundTile()
 {
 	this->type = boardTileType::Ground;
-	this->texture.LoadTexture(GlobalRenderer::GetRenderer(), GROUND_IMAGE);
+	this->texture = GlobalRenderer::LoadTexture(GROUND_IMAGE);
 }

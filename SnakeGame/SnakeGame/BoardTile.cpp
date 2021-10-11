@@ -25,5 +25,5 @@ void BoardTile::Update()
 
 void BoardTile::Render()
 {
-	//texture.Draw(GlobalRenderer::GetRenderer(),&srcRect,&destRect);
+	GlobalRenderer::DrawTexture(texture, &srcRect, &destRect);
 }
