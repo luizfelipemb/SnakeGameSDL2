@@ -15,5 +15,8 @@ public:
 	void Clean();
 private:
 	std::array<std::array<BoardTile, NUM_OF_XLINES>, NUM_OF_YLINES> boardTiles;
+	TextureComponent* background;
+	SDL_Rect bgend;
+	int timer;
 };
 
