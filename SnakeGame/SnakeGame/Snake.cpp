@@ -2,11 +2,15 @@
 
 Snake::Snake()
 {
+}
 
-	for (size_t i = 0; i < SNAKE_BEGGINING_SIZE; ++i) 
+void Snake::Setup()
+{
+
+	for (size_t i = 0; i < SNAKE_BEGGINING_SIZE; ++i)
 	{
 		SnakeBodyPart temp;
-		temp.SetPosition(i* SQUARE_SIZE, i * SQUARE_SIZE);
+		temp.SetPosition(i * SQUARE_SIZE, i * SQUARE_SIZE);
 		snakeBodyParts.push_back(temp);
 	}
 }

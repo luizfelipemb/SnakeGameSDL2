@@ -3,7 +3,11 @@ using namespace std;
 
 SnakeBodyPart::SnakeBodyPart()
 {
-	texture = GlobalRenderer::LoadTexture(SNAKE_IMAGE);
+	positionX = 0;
+	positionY = 0;
+	destRect = {0,0,0,0};
+	srcRect = { SQUARE_SIZE,SQUARE_SIZE,0,0 };
+	texture = GlobalRenderer::Get().LoadTexture(SNAKE_IMAGE);
 	cout<<"snake body part created!"<<endl;
 }
 
@@ -28,5 +32,5 @@ void SnakeBodyPart::Update()
 
 void SnakeBodyPart::Render()
 {
-	GlobalRenderer::DrawTexture(texture, &srcRect, &destRect);
+	GlobalRenderer::Get().DrawTexture(texture, &srcRect, &destRect);
 }

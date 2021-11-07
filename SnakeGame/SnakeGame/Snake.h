@@ -6,6 +6,7 @@ class Snake
 {
 public:
 	Snake(); 
+	void Setup();
 	void Update();
 	void Render();
 private:

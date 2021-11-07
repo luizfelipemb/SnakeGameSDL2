@@ -3,7 +3,6 @@ using namespace std;
 
 Board::Board()
 {
-	Setup();
 }
 
 Board::~Board()
@@ -15,9 +14,11 @@ void Board::Setup()
 {
 	cout << "setup start" << endl;
 
-	backgroundTexture = GlobalRenderer::LoadTexture(GAME_BACKGROUND);
+	backgroundTexture = GlobalRenderer::Get().LoadTexture(GAME_BACKGROUND);
 	bgend.w = WINDOW_WIDTH;
 	bgend.h = WINDOW_HEIGHT;
+
+	snake.Setup();
 	cout<<"setup done"<<endl;
 }
 
@@ -28,7 +29,7 @@ void Board::Update()
 }
 void Board::Render()
 {
-	//GlobalRenderer::DrawTexture(backgroundTexture,nullptr,&bgend);
+	GlobalRenderer::Get().DrawTexture(backgroundTexture,nullptr,&bgend);
 	snake.Render();
 }
 

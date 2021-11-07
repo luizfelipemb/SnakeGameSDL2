@@ -2,6 +2,7 @@
 
 using namespace std;
 
+GlobalRenderer GlobalRenderer::instance;
 Game::Game() = default;
 Game::~Game()
 {
@@ -24,7 +25,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		{
 			std::cout << "Window created!" << std::endl;
 		}
-		GlobalRenderer::CreateRenderer(window);
+		GlobalRenderer::Get().CreateRenderer(window);
 		TTF_Init();
 
 		currentState = gameState::Running;
@@ -75,7 +76,7 @@ void Game::update()
 
 void Game::render()
 {
-	SDL_RenderClear(GlobalRenderer::GetRenderer());
+	SDL_RenderClear(GlobalRenderer::Get().GetRenderer());
 	switch (currentState)
 	{
 	case Game::Idle:
@@ -86,13 +87,13 @@ void Game::render()
 	case Game::Quit:
 		break;
 	}
-	SDL_RenderPresent(GlobalRenderer::GetRenderer());
+	SDL_RenderPresent(GlobalRenderer::Get().GetRenderer());
 }
 
 void Game::clean()
 {
 	SDL_DestroyWindow(window);
-	SDL_DestroyRenderer(GlobalRenderer::GetRenderer());
+	SDL_DestroyRenderer(GlobalRenderer::Get().GetRenderer());
 	
 	TTF_Quit();
 	IMG_Quit();
