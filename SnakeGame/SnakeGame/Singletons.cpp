@@ -10,12 +10,12 @@ int Random::IGetRandomBetween(int first, int second)
 	return randNum;
 }
 
-SDL_Renderer* GlobalRenderer::IGetRenderer()
+SDL_Renderer* GlobalRenderer::GetRenderer()
 {
 	return renderer;
 }
 
-void GlobalRenderer::ICreateRenderer(SDL_Window* window)
+void GlobalRenderer::CreateRenderer(SDL_Window* window)
 {
 	renderer = SDL_CreateRenderer(window, -1, 0);
 	if (renderer)
@@ -28,7 +28,7 @@ void GlobalRenderer::ICreateRenderer(SDL_Window* window)
 	}
 }
 
-SDL_Texture* GlobalRenderer::ILoadTexture(const char* fileName)
+SDL_Texture* GlobalRenderer::LoadTexture(const char* fileName)
 {
 	SDL_Surface* tempSurface = IMG_Load(fileName);
 	if (!tempSurface) {
@@ -47,7 +47,7 @@ SDL_Texture* GlobalRenderer::ILoadTexture(const char* fileName)
 	return tex;
 }
 
-void GlobalRenderer::IDrawTexture(SDL_Texture* texture, SDL_Rect* src, SDL_Rect* dest)
+void GlobalRenderer::DrawTexture(SDL_Texture* texture, SDL_Rect* src, SDL_Rect* dest)
 {
 	SDL_RenderCopy(renderer, texture, src, dest);
 }
