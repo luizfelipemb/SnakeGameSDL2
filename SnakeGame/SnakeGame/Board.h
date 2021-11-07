@@ -2,7 +2,8 @@
 #include "Configs.h"
 #include <iostream>
 #include <array>
-#include "BoardTile.h"
+#include "Singletons.h"
+#include "Snake.h"
 
 class Board
 {
@@ -14,9 +15,9 @@ public:
 	void Render();
 	void Clean();
 private:
-	std::array<std::array<BoardTile, NUM_OF_XLINES>, NUM_OF_YLINES> boardTiles;
 	int timer;
-	SDL_Texture* snaketexture;
+	Snake snake;
+	SDL_Texture* backgroundTexture;
 	SDL_Rect bgend;
 };
 

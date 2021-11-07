@@ -152,21 +152,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
-    <ClInclude Include="BoardTile.h" />
     <ClInclude Include="Configs.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="GroundTile.h" />
     <ClInclude Include="Singletons.h" />
-    <ClInclude Include="SnakeTile.h" />
+    <ClInclude Include="Snake.h" />
+    <ClInclude Include="SnakeBodyPart.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
-    <ClCompile Include="BoardTile.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GroundTile.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Singletons.cpp" />
-    <ClCompile Include="SnakeTile.cpp" />
+    <ClCompile Include="Snake.cpp" />
+    <ClCompile Include="SnakeBodyPart.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

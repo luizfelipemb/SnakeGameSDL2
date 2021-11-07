@@ -8,7 +8,6 @@
 
 // Image Settings
 #define GAME_BACKGROUND "assets/background.png"
-#define GROUND_IMAGE "assets/tile.png"
 #define SNAKE_IMAGE "assets/snake.png"
 
 // Font Settings
@@ -24,4 +23,5 @@
 #define SQUARE_SIZE 70
 
 // Game Settings
+#define SNAKE_BEGGINING_SIZE 3
 #define TIMER_COUNTDOWN 180

@@ -1,5 +1,5 @@
 #include "Singletons.h"
-
+using namespace std;
 
 int Random::IGetRandomBetween(int first, int second)
 {
@@ -49,5 +49,6 @@ SDL_Texture* GlobalRenderer::ILoadTexture(const char* fileName)
 
 void GlobalRenderer::IDrawTexture(SDL_Texture* texture, SDL_Rect* src, SDL_Rect* dest)
 {
+	cout<<"Drawing texture:"<<texture<<endl;
 	SDL_RenderCopy(renderer, texture, src, dest);
 }
