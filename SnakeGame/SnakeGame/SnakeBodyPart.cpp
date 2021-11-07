@@ -5,10 +5,9 @@ SnakeBodyPart::SnakeBodyPart()
 {
 	positionX = 0;
 	positionY = 0;
-	destRect = {0,0,0,0};
-	srcRect = { SQUARE_SIZE,SQUARE_SIZE,0,0 };
+	srcRect = { 0,0, SQUARE_SIZE,SQUARE_SIZE };
+	destRect = { positionX,positionY, SQUARE_SIZE,SQUARE_SIZE };
 	texture = GlobalRenderer::Get().LoadTexture(SNAKE_IMAGE);
-	cout<<"snake body part created!"<<endl;
 }
 
 void SnakeBodyPart::SetPosition(int x, int y)
@@ -19,15 +18,8 @@ void SnakeBodyPart::SetPosition(int x, int y)
 
 void SnakeBodyPart::Update()
 {
-	srcRect.x = SQUARE_SIZE;
-	srcRect.y = SQUARE_SIZE;
-	srcRect.w = 0;
-	srcRect.h = 0;
-
 	destRect.x = positionX;
 	destRect.y = positionY;
-	destRect.w = srcRect.w;
-	destRect.h = srcRect.h;
 }
 
 void SnakeBodyPart::Render()

@@ -29,7 +29,7 @@ void Board::Update()
 }
 void Board::Render()
 {
-	GlobalRenderer::Get().DrawTexture(backgroundTexture,nullptr,&bgend);
+	//GlobalRenderer::Get().DrawTexture(backgroundTexture,nullptr,&bgend);
 	snake.Render();
 }
 

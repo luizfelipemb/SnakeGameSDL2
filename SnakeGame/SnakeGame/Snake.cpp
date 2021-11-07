@@ -6,7 +6,7 @@ Snake::Snake()
 
 void Snake::Setup()
 {
-
+	
 	for (size_t i = 0; i < SNAKE_BEGGINING_SIZE; ++i)
 	{
 		SnakeBodyPart temp;
@@ -17,14 +17,19 @@ void Snake::Setup()
 
 void Snake::Update()
 {
-	for (auto snakeBodyPart : snakeBodyParts) {
-		snakeBodyPart.Update();
+	for (auto it = snakeBodyParts.begin(); it != snakeBodyParts.end(); it++)
+	{
+		it->Update();
 	}
+
 }
 
 void Snake::Render()
 {
-	for (auto snakeBodyPart : snakeBodyParts) {
-		snakeBodyPart.Render();
+	
+	for (auto it = snakeBodyParts.begin(); it != snakeBodyParts.end(); it++)
+	{
+		it->Render();
 	}
+	
 }

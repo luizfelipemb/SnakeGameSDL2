@@ -49,6 +49,5 @@ SDL_Texture* GlobalRenderer::LoadTexture(const char* fileName)
 
 void GlobalRenderer::DrawTexture(SDL_Texture* texture, SDL_Rect* src, SDL_Rect* dest)
 {
-	cout<<"Drawing texture:"<<texture<<endl;
 	SDL_RenderCopy(renderer, texture, src, dest);
 }

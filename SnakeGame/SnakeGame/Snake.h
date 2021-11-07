@@ -1,6 +1,8 @@
 #pragma once
 #include <list>
+#include <vector>
 #include "SnakeBodyPart.h"
+#include <memory>
 
 class Snake
 {
@@ -10,6 +12,7 @@ public:
 	void Update();
 	void Render();
 private:
-	std::list<SnakeBodyPart> snakeBodyParts;
+	std::vector<SnakeBodyPart> snakeBodyParts;
+	SnakeBodyPart testpart;
 };
 
