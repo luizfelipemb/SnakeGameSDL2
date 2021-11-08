@@ -4,20 +4,22 @@
 #include <array>
 #include "Singletons.h"
 #include "Snake.h"
+#include "BoardRenderer.h"
+#include "InputManager.h"
 
-class Board
+class BoardBrain
 {
 public:
-	Board();
-	~Board();
-	void Update();
+	BoardBrain();
+	~BoardBrain();
 	void Setup();
+	void Update();
 	void Render();
 	void Clean();
 private:
 	int timer;
 	Snake snake;
-	SDL_Texture* backgroundTexture;
-	SDL_Rect bgend;
+	BoardRenderer boardRenderer;
+	InputManager inputManager;
 };
 

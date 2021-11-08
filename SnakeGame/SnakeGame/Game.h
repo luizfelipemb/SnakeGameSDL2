@@ -6,7 +6,7 @@
 #include "SDL_ttf.h"
 #include "Configs.h"
 #include "Singletons.h"
-#include "Board.h"
+#include "BoardBrain.h"
 #include <iostream>
 #include <string>
 
@@ -30,7 +30,7 @@ private:
 	gameState currentState;
 	SDL_Window* window;
 	int _width, _height;
-	Board board;
+	BoardBrain board;
 };
 
 #endif /* Game_h */

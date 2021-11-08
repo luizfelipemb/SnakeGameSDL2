@@ -8,6 +8,7 @@
 
 // Image Settings
 #define GAME_BACKGROUND "assets/background.png"
+#define TILE_IMAGE "assets/tile.png"
 #define SNAKE_IMAGE "assets/snake.png"
 
 // Font Settings
@@ -18,10 +19,12 @@
 #define VOLUME 60
 
 // Board Settings
-#define NUM_OF_XLINES 10
-#define NUM_OF_YLINES 10
+#define BOARD_NUM_OF_XLINES 10
+#define BOARD_NUM_OF_YLINES 10
 #define SQUARE_SIZE 70
 
 // Game Settings
 #define SNAKE_BEGGINING_SIZE 3
+#define SNAKE_BEGGIN_LINE_X 5
+#define SNAKE_BEGGIN_LINE_Y 5
 #define TIMER_COUNTDOWN 180
