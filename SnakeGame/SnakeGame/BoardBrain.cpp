@@ -34,3 +34,8 @@ void BoardBrain::Clean()
 {
 
 }
+
+void BoardBrain::KeyPressed(SDL_KeyboardEvent& key)
+{
+	inputManager.KeyPressed(key);
+}

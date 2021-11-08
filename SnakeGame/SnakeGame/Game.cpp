@@ -54,6 +54,7 @@ void Game::handleEvents()
 	case SDL_MOUSEMOTION:
 		break;
 	case SDL_KEYDOWN:
+		board.KeyPressed(event.key);
 		break;
 	default:
 		break;

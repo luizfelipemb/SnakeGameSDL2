@@ -16,6 +16,7 @@ public:
 	void Update();
 	void Render();
 	void Clean();
+	void KeyPressed(SDL_KeyboardEvent& key);
 private:
 	int timer;
 	Snake snake;
