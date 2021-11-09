@@ -1,7 +1,8 @@
 #include "BoardBrain.h"
 using namespace std;
 
-BoardBrain::BoardBrain()
+BoardBrain::BoardBrain() 
+: snakeMovement(inputManager,snake)
 {
 }
 
@@ -16,13 +17,19 @@ void BoardBrain::Setup()
 
 	boardRenderer.Setup();
 	snake.Setup();
+	snake.Update();
 	cout<<"setup done"<<endl;
 }
 
 void BoardBrain::Update()
 {
 	timer++;
-	snake.Update();
+	if (timer >= timerToUpdate)
+	{
+		timer = 0;
+		snakeMovement.Update();
+		snake.Update();
+	}
 }
 void BoardBrain::Render()
 {
