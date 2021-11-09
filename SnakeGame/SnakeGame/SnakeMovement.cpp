@@ -12,28 +12,60 @@ void SnakeMovement::Update()
 	StartMove(inputManager.currentDirection);
 }
 
-void SnakeMovement::StartMove(InputManager::Direction direction)
+void SnakeMovement::StartMove(Direction direction)
 {
 	switch (direction)
 	{
-	case InputManager::Direction::forward:
-		snake.headY--;
-		break;
-	case InputManager::Direction::backward:
-		snake.headY++;
-		break;
-	case InputManager::Direction::right:
-		snake.headX++;
-		break;
-	case InputManager::Direction::left:
-		snake.headX--;
+	case Direction::forward:
+	{
+		if (lastMoveDirection != Direction::backward)
+		{
+			lastMoveDirection = Direction::forward;
+			snake.headY--;
+		}
+		else
+			snake.headY++;
 		break;
 	}
+	case Direction::backward:
+	{
+		if (lastMoveDirection != Direction::forward)
+		{
+			lastMoveDirection = Direction::backward;
+			snake.headY++;
+		}
+		else
+			snake.headY--;
+		break;
+	}
+	case Direction::right:
+	{
+		if (lastMoveDirection != Direction::left)
+		{
+			lastMoveDirection = Direction::right;
+			snake.headX++;
+		}
+		else
+			snake.headX--;
+		break;
+	}
+	case Direction::left:
+	{
+		if (lastMoveDirection != Direction::right)
+		{
+			lastMoveDirection = Direction::left;
+			snake.headX--;
+		}
+		else
+			snake.headX++;
+		break;
+	}
+	}
 
-	if(!snake.CheckIfIsDead())
+	if (!snake.CheckIfIsDead())
 		DoMove();
 	else
-		cout<<"snake is dead"<<endl;
+		cout << "snake is dead" << endl;
 }
 
 void SnakeMovement::DoMove()

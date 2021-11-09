@@ -2,10 +2,10 @@
 #include <SDL_events.h>
 #include <iostream>
 
+enum class Direction { forward, backward, right, left };
 class InputManager
 {
 public:
-	enum class Direction { forward, backward, right, left };
 	void KeyPressed(SDL_KeyboardEvent& key);
 	Direction currentDirection;
 private:

@@ -9,7 +9,8 @@ public:
 private:
 	InputManager& inputManager;
 	Snake& snake;
-	void StartMove(InputManager::Direction direction);
+	Direction lastMoveDirection;
+	void StartMove(Direction direction);
 	void DoMove();
 };
 
