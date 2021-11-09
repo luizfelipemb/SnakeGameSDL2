@@ -1,17 +1,19 @@
 #pragma once
 #include <list>
-#include <vector>
 #include "SnakeBodyPart.h"
 #include <memory>
 
 class Snake
 {
+friend class SnakeMovement;
 public:
 	Snake(); 
 	void Setup();
 	void Update();
 	void Render();
 private:
-	std::vector<SnakeBodyPart> snakeBodyParts;
+	std::list<SnakeBodyPart> snakeBodyParts;
+	int headX;
+	int headY;
 };
 

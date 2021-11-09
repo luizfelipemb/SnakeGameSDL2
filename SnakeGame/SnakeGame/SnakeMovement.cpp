@@ -9,16 +9,30 @@ SnakeMovement::SnakeMovement(InputManager& inputManager, Snake& snake) :
 
 void SnakeMovement::Update()
 {
-	switch (inputManager.currentDirection)
+	Move(inputManager.currentDirection);
+}
+
+void SnakeMovement::Move(InputManager::Direction direction)
+{
+	switch (direction)
 	{
-		case InputManager::DirectionInput::forward:
-			
-			break;
-		case InputManager::DirectionInput::backward:
-			break;
-		case InputManager::DirectionInput::right:
-			break;
-		case InputManager::DirectionInput::left:
-			break;
+	case InputManager::Direction::forward:
+		snake.headY--;
+		break;
+	case InputManager::Direction::backward:
+		snake.headY++;
+		break;
+	case InputManager::Direction::right:
+		snake.headX++;
+		break;
+	case InputManager::Direction::left:
+		snake.headX--;
+		break;
 	}
+
+	SnakeBodyPart temp = snake.snakeBodyParts.back();
+	temp.SetPosition(snake.headX * SQUARE_SIZE, snake.headY * SQUARE_SIZE);
+	snake.snakeBodyParts.pop_back();
+	snake.snakeBodyParts.emplace_front(temp);
+
 }

@@ -6,6 +6,8 @@ Snake::Snake()
 
 void Snake::Setup()
 {
+	headX = SNAKE_BEGGIN_LINE_X;
+	headY = SNAKE_BEGGIN_LINE_Y;
 	for (size_t i = 0; i < SNAKE_BEGGINING_SIZE; ++i)
 	{
 		SnakeBodyPart temp;

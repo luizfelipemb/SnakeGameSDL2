@@ -7,22 +7,22 @@ void InputManager::KeyPressed(SDL_KeyboardEvent& key)
 	switch (key.keysym.sym) {
 		case SDL_KeyCode('w') : 
 		{
-			currentDirection = DirectionInput::forward;
+			currentDirection = Direction::forward;
 			break;
 		}
 		case SDL_KeyCode('s'):
 		{
-			currentDirection = DirectionInput::backward;
+			currentDirection = Direction::backward;
 			break;
 		}
 		case SDL_KeyCode('a'):
 		{
-			currentDirection = DirectionInput::right;
+			currentDirection = Direction::left;
 			break;
 		}
 		case SDL_KeyCode('d'):
 		{
-			currentDirection = DirectionInput::left;
+			currentDirection = Direction::right;
 			break;
 		}
 	}
