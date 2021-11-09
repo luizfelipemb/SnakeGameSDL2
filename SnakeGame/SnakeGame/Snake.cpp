@@ -1,4 +1,5 @@
 #include "Snake.h"
+using namespace std;
 
 Snake::Snake()
 {
@@ -18,7 +19,7 @@ void Snake::Setup()
 
 void Snake::Update()
 {
-	for (auto snakePart = snakeBodyParts.begin(); snakePart != snakeBodyParts.end(); snakePart++)
+	for (auto snakePart = snakeBodyParts.begin(); snakePart != snakeBodyParts.end(); ++snakePart)
 	{
 		snakePart->Update();
 	}
@@ -26,8 +27,32 @@ void Snake::Update()
 
 void Snake::Render()
 {
-	for (auto snakePart = snakeBodyParts.begin(); snakePart != snakeBodyParts.end(); snakePart++)
+	for (auto snakePart = snakeBodyParts.begin(); snakePart != snakeBodyParts.end(); ++snakePart)
 	{
 		snakePart->Render();
 	}
+}
+
+bool Snake::CheckIfIsDead()
+{
+	if(isDead)
+		return true;
+
+	if (headX < 0 or headX >= BOARD_NUM_OF_XLINES
+		or headY < 0 or headY >= BOARD_NUM_OF_YLINES) 
+	{
+		isDead = true;
+		return true;
+	}
+	
+	for (auto snakePart = ++snakeBodyParts.begin(); snakePart != snakeBodyParts.end(); ++snakePart)
+	{
+		if (snakePart->GetPosX() == headX * SQUARE_SIZE && snakePart->GetPosY() == headY * SQUARE_SIZE)
+		{
+			isDead = true;
+			return true;
+		}
+	}
+	
+	return false;
 }

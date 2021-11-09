@@ -15,5 +15,7 @@ private:
 	std::list<SnakeBodyPart> snakeBodyParts;
 	int headX;
 	int headY;
+	bool CheckIfIsDead();
+	bool isDead = false;
 };
 

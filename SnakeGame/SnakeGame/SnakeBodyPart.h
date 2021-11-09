@@ -9,6 +9,8 @@ public:
 	void SetPosition(int x, int y);
 	void Update();
 	void Render();
+	int GetPosX(){return positionX;}
+	int GetPosY(){return positionY;}
 private:
 	SDL_Texture* texture;
 	SDL_Rect srcRect = { SQUARE_SIZE,SQUARE_SIZE,0,0 };

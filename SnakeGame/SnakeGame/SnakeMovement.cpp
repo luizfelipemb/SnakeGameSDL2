@@ -9,10 +9,10 @@ SnakeMovement::SnakeMovement(InputManager& inputManager, Snake& snake) :
 
 void SnakeMovement::Update()
 {
-	Move(inputManager.currentDirection);
+	StartMove(inputManager.currentDirection);
 }
 
-void SnakeMovement::Move(InputManager::Direction direction)
+void SnakeMovement::StartMove(InputManager::Direction direction)
 {
 	switch (direction)
 	{
@@ -30,9 +30,17 @@ void SnakeMovement::Move(InputManager::Direction direction)
 		break;
 	}
 
+	if(!snake.CheckIfIsDead())
+		DoMove();
+	else
+		cout<<"snake is dead"<<endl;
+}
+
+void SnakeMovement::DoMove()
+{
 	SnakeBodyPart temp = snake.snakeBodyParts.back();
 	temp.SetPosition(snake.headX * SQUARE_SIZE, snake.headY * SQUARE_SIZE);
 	snake.snakeBodyParts.pop_back();
 	snake.snakeBodyParts.emplace_front(temp);
-
 }
+
