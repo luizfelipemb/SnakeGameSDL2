@@ -20,15 +20,12 @@ void Snake::Update()
 	{
 		snakePart->Update();
 	}
-
 }
 
 void Snake::Render()
 {
-	
 	for (auto snakePart = snakeBodyParts.begin(); snakePart != snakeBodyParts.end(); snakePart++)
 	{
 		snakePart->Render();
 	}
-	
 }

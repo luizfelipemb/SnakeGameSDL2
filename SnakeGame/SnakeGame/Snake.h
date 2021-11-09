@@ -13,6 +13,5 @@ public:
 	void Render();
 private:
 	std::vector<SnakeBodyPart> snakeBodyParts;
-	SnakeBodyPart testpart;
 };
 
