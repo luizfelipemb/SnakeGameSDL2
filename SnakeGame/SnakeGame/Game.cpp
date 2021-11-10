@@ -92,6 +92,7 @@ void Game::render()
 
 void Game::clean()
 {
+
 	SDL_DestroyWindow(window);
 	SDL_DestroyRenderer(GlobalRenderer::Get().GetRenderer());
 	

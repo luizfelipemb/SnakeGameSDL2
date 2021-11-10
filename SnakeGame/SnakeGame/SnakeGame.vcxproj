@@ -161,6 +161,7 @@
     <ClInclude Include="Snake.h" />
     <ClInclude Include="SnakeBodyPart.h" />
     <ClInclude Include="SnakeMovement.h" />
+    <ClInclude Include="TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BoardBrain.cpp" />
@@ -173,6 +174,7 @@
     <ClCompile Include="Snake.cpp" />
     <ClCompile Include="SnakeBodyPart.cpp" />
     <ClCompile Include="SnakeMovement.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,8 +13,6 @@ public:
 	int GetPosY(){return positionY;}
 private:
 	SDL_Texture* texture;
-	SDL_Rect srcRect = { SQUARE_SIZE,SQUARE_SIZE,0,0 };
-	SDL_Rect destRect;
 	int positionX;
 	int positionY;
 };
