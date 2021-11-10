@@ -2,6 +2,7 @@
 #include <SDL_image.h>
 #include "Configs.h"
 #include "Singletons.h"
+#include "TextureManager.h"
 
 class BoardTile
 {

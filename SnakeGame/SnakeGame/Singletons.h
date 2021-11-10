@@ -39,8 +39,6 @@ public:
 	}
 	SDL_Renderer* GetRenderer();
 	void CreateRenderer(SDL_Window* window);
-	SDL_Texture* LoadTexture(const char* fileName);
-	void DrawTexture(SDL_Texture* texture, SDL_Rect* src, SDL_Rect* dest);
 private:
 	GlobalRenderer() = default;
 	SDL_Renderer* renderer;

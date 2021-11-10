@@ -64,3 +64,8 @@ void TextureManager::ClearFromTextureMap(std::string filename)
 {
 	textureMap.erase(filename);
 }
+
+void TextureManager::ClearAllTextures()
+{
+	textureMap.clear();
+}

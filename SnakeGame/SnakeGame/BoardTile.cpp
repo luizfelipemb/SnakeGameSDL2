@@ -4,10 +4,11 @@ BoardTile::BoardTile(int x, int y): positionX(x), positionY(y)
 {
 	srcRect = { 0,0, SQUARE_SIZE,SQUARE_SIZE };
 	destRect = { positionX,positionY, SQUARE_SIZE,SQUARE_SIZE };
-	texture = GlobalRenderer::Get().LoadTexture(TILE_IMAGE);
+	TextureManager::GetInstance().Load(TILE_IMAGE, GlobalRenderer::Get().GetRenderer());
 }
 
 void BoardTile::Render()
 {
-	GlobalRenderer::Get().DrawTexture(texture,&srcRect,&destRect);
+	TextureManager::GetInstance().Draw(TILE_IMAGE, positionX, positionY, SQUARE_SIZE, SQUARE_SIZE,
+		1, 0, GlobalRenderer::Get().GetRenderer());
 }

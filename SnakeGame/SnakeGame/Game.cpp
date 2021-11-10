@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "TextureManager.h"
 
 using namespace std;
 
@@ -92,7 +93,7 @@ void Game::render()
 
 void Game::clean()
 {
-
+	TextureManager::GetInstance().ClearAllTextures();
 	SDL_DestroyWindow(window);
 	SDL_DestroyRenderer(GlobalRenderer::Get().GetRenderer());
 	
