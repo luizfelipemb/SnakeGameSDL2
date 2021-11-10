@@ -7,7 +7,7 @@ SnakeBodyPart::SnakeBodyPart()
 	positionX = 0;
 	positionY = 0;
 
-	TextureManager::Instance()->Load(SNAKE_IMAGE, "snake", GlobalRenderer::Get().GetRenderer());
+	TextureManager::GetInstance().Load(SNAKE_IMAGE, GlobalRenderer::Get().GetRenderer());
 }
 
 void SnakeBodyPart::SetPosition(int x, int y)
@@ -22,5 +22,6 @@ void SnakeBodyPart::Update()
 
 void SnakeBodyPart::Render()
 {
-	TextureManager::Instance()->Draw("snake", positionX, positionY, SQUARE_SIZE, SQUARE_SIZE, 1, 0, GlobalRenderer::Get().GetRenderer());
+	TextureManager::GetInstance().Draw(SNAKE_IMAGE, positionX, positionY, SQUARE_SIZE, SQUARE_SIZE,
+	1, 0, GlobalRenderer::Get().GetRenderer());
 }

@@ -9,33 +9,28 @@
 class TextureManager
 {
 public:
+	TextureManager(const TextureManager&) = delete;
 
-	static TextureManager* Instance()
+	void operator=(const TextureManager&) = delete;
+
+	static TextureManager& GetInstance()
 	{
-		if (instance == 0)
-		{
-			instance = new TextureManager();
-		}
+		static TextureManager instance;
 		return instance;
 	}
 
-	bool Load(std::string fileName, std::string id, SDL_Renderer* renderer);
+	bool Load(std::string fileName, SDL_Renderer* renderer);
 
-	void Draw(std::string id, int x, int y, int w, int h, double scale, double r, SDL_Renderer* renderer,
+	void Draw(std::string filename, int x, int y, int w, int h, double scale, double r, SDL_Renderer* renderer,
 		SDL_RendererFlip flip = SDL_FLIP_NONE);
 
-	void DrawFrame(std::string id, int x, int y, int w, int h, double scale, int currentRow, int currentFrame, double angle,
+	void DrawFrame(std::string filename, int x, int y, int w, int h, double scale, int currentRow, int currentFrame, double angle,
 		SDL_Renderer* renderer, SDL_RendererFlip flip = SDL_FLIP_NONE);
 
-	void ClearFromTextureMap(std::string id);
+	void ClearFromTextureMap(std::string filename);
 
 	std::map<std::string, SDL_Texture*> textureMap;
 
 private:
-
-	static TextureManager* instance;
-
-	TextureManager() {}
-	~TextureManager() {}
-
+	TextureManager() = default;
 };
