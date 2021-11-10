@@ -34,6 +34,7 @@ public:
 
 	static GlobalRenderer& Get()
 	{
+		static GlobalRenderer instance;
 		return instance;
 	}
 	SDL_Renderer* GetRenderer();
@@ -41,7 +42,6 @@ public:
 	SDL_Texture* LoadTexture(const char* fileName);
 	void DrawTexture(SDL_Texture* texture, SDL_Rect* src, SDL_Rect* dest);
 private:
-	static GlobalRenderer instance;
 	GlobalRenderer() = default;
 	SDL_Renderer* renderer;
 };

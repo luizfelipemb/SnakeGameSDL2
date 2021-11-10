@@ -2,7 +2,6 @@
 
 using namespace std;
 
-GlobalRenderer GlobalRenderer::instance;
 Game::Game() = default;
 Game::~Game()
 {
