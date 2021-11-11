@@ -151,12 +151,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AppleItem.h" />
     <ClInclude Include="BoardBrain.h" />
     <ClInclude Include="BoardRenderer.h" />
     <ClInclude Include="BoardTile.h" />
     <ClInclude Include="Configs.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="ItemTemplate.h" />
     <ClInclude Include="Singletons.h" />
     <ClInclude Include="Snake.h" />
     <ClInclude Include="SnakeBodyPart.h" />
@@ -164,11 +166,13 @@
     <ClInclude Include="TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AppleItem.cpp" />
     <ClCompile Include="BoardBrain.cpp" />
     <ClCompile Include="BoardRenderer.cpp" />
     <ClCompile Include="BoardTile.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="ItemTemplate.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Singletons.cpp" />
     <ClCompile Include="Snake.cpp" />

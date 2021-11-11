@@ -2,7 +2,8 @@
 using namespace std;
 
 BoardBrain::BoardBrain() 
-: snakeMovement(inputManager,snake)
+: snakeMovement(inputManager,snake), 
+appleTest(APPLE_IMAGE, 1 * SQUARE_SIZE, 1 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE)
 {
 }
 
@@ -35,6 +36,7 @@ void BoardBrain::Render()
 {
 	boardRenderer.Render();
 	snake.Render();
+	appleTest.Render();
 }
 
 void BoardBrain::Clean()

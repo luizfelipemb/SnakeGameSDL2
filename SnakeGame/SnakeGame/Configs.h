@@ -7,9 +7,9 @@
 #define WINDOW_FPS 60
 
 // Image Settings
-#define GAME_BACKGROUND "assets/background.png"
 #define TILE_IMAGE "assets/tile.png"
 #define SNAKE_IMAGE "assets/snake.png"
+#define APPLE_IMAGE "assets/apple.png"
 
 // Font Settings
 #define FONT_DIRECTORY "assets/RetroGaming.ttf"

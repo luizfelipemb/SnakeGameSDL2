@@ -7,6 +7,7 @@
 #include "BoardRenderer.h"
 #include "InputManager.h"
 #include "SnakeMovement.h"
+#include "AppleItem.h"
 
 class BoardBrain
 {
@@ -25,5 +26,6 @@ private:
 	BoardRenderer boardRenderer;
 	InputManager inputManager;
 	SnakeMovement snakeMovement;
+	AppleItem appleTest;
 };
 
