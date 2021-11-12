@@ -63,7 +63,9 @@ void SnakeMovement::StartMove(Direction direction)
 	}
 
 	if (!snake.CheckIfIsDead())
+	{
 		DoMove();
+	}
 	else
 		cout << "snake is dead" << endl;
 }
@@ -72,7 +74,15 @@ void SnakeMovement::DoMove()
 {
 	SnakeBodyPart temp = snake.snakeBodyParts.back();
 	temp.SetPosition(snake.headX * SQUARE_SIZE, snake.headY * SQUARE_SIZE);
-	snake.snakeBodyParts.pop_back();
+	if (!snake.canIncreaseBody)
+	{
+		snake.snakeBodyParts.pop_back();
+	}
+	else 
+	{
+		snake.canIncreaseBody = false;
+	}
+	
 	snake.snakeBodyParts.emplace_front(temp);
 }
 

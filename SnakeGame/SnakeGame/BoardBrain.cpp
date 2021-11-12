@@ -1,9 +1,9 @@
 #include "BoardBrain.h"
+
 using namespace std;
 
 BoardBrain::BoardBrain() 
-: snakeMovement(inputManager,snake), 
-appleTest(APPLE_IMAGE, 1 * SQUARE_SIZE, 1 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE)
+: snakeMovement(inputManager,snake)
 {
 }
 
@@ -30,13 +30,19 @@ void BoardBrain::Update()
 		timer = 0;
 		snakeMovement.Update();
 		snake.Update();
+		CheckIfSnakeTookApple();
 	}
+	appleSpawner.Update();
 }
 void BoardBrain::Render()
 {
 	boardRenderer.Render();
 	snake.Render();
-	appleTest.Render();
+
+	for (auto apple : appleSpawner.GetAppleList())
+	{
+		apple.Render();
+	}
 }
 
 void BoardBrain::Clean()
@@ -47,4 +53,19 @@ void BoardBrain::Clean()
 void BoardBrain::KeyPressed(SDL_KeyboardEvent& key)
 {
 	inputManager.KeyPressed(key);
+}
+
+void BoardBrain::CheckIfSnakeTookApple()
+{	
+	int pos = 0;
+	for (auto apple : appleSpawner.GetAppleList())
+	{
+		pos++;
+		if (apple.CurrentPositionIsEqualTo(snake.GetHeadX() * SQUARE_SIZE, snake.GetHeadY() * SQUARE_SIZE))
+		{
+			snake.IncreaseBody();
+			appleSpawner.RemoveItem(pos);
+			break;
+		}
+	}
 }

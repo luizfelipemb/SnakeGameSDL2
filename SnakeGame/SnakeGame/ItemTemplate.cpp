@@ -3,6 +3,10 @@
 ItemTemplate::ItemTemplate(std::string textureDirectory, int posX, int posY, int sizeX, int sizeY) :
 textureDirectory(textureDirectory), positionX(posX), positionY(posY), sizeX(sizeX), sizeY(sizeY)
 {
+}
+
+void ItemTemplate::Setup()
+{
 	TextureManager::GetInstance().Load(textureDirectory, GlobalRenderer::Get().GetRenderer());
 }
 

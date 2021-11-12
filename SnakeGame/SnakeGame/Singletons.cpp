@@ -1,7 +1,7 @@
 #include "Singletons.h"
 using namespace std;
 
-int Random::IGetRandomBetween(int first, int second)
+int Random::GetRandomBetween(int first, int second)
 {
 	seed++;
 	std::mt19937 rng(seed);

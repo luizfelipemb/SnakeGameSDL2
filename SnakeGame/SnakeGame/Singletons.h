@@ -18,10 +18,9 @@ public:
 		static Random instance;
 		return instance;
 	}
-	static int GetRandomBetween(int first, int second) { return Get().IGetRandomBetween(first, second); }
+	int GetRandomBetween(int first, int second);
 private:
 	Random() = default;
-	int IGetRandomBetween(int first, int second);
 	unsigned int seed = time(nullptr);
 };
 

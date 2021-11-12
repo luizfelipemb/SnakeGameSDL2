@@ -33,6 +33,11 @@ void Snake::Render()
 	}
 }
 
+void Snake::IncreaseBody()
+{
+	canIncreaseBody = true;
+}
+
 bool Snake::CheckIfIsDead()
 {
 	if(isDead)

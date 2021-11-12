@@ -158,6 +158,7 @@
     <ClInclude Include="Configs.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="AppleSpawner.h" />
     <ClInclude Include="ItemTemplate.h" />
     <ClInclude Include="Singletons.h" />
     <ClInclude Include="Snake.h" />
@@ -172,6 +173,7 @@
     <ClCompile Include="BoardTile.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="AppleSpawner.cpp" />
     <ClCompile Include="ItemTemplate.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Singletons.cpp" />
