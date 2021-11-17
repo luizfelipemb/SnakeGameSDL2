@@ -39,7 +39,7 @@ void BoardBrain::Render()
 	boardRenderer.Render();
 	snake.Render();
 
-	for (auto apple : appleSpawner.GetAppleList())
+	for (auto&& apple : appleSpawner.GetAppleList())
 	{
 		apple.Render();
 	}
@@ -58,7 +58,7 @@ void BoardBrain::KeyPressed(SDL_KeyboardEvent& key)
 void BoardBrain::CheckIfSnakeTookApple()
 {	
 	int pos = 0;
-	for (auto apple : appleSpawner.GetAppleList())
+	for (auto&& apple : appleSpawner.GetAppleList())
 	{
 		pos++;
 		if (apple.CurrentPositionIsEqualTo(snake.GetHeadX() * SQUARE_SIZE, snake.GetHeadY() * SQUARE_SIZE))
