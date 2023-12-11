@@ -1,0 +1,57 @@
+﻿  AppleItem.cpp
+  BoardBrain.cpp
+D:\dev\SnakeGameSDL2\SnakeGame\SnakeGame\Singletons.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'AppleItem.cpp')
+  
+D:\dev\SnakeGameSDL2\SnakeGame\SnakeGame\Singletons.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'BoardBrain.cpp')
+  
+  BoardRenderer.cpp
+D:\dev\SnakeGameSDL2\SnakeGame\SnakeGame\BoardRenderer.h(3,10): error C1083: Cannot open include file: 'SDL_image.h': No such file or directory
+  (compiling source file 'BoardRenderer.cpp')
+  
+  BoardTile.cpp
+D:\dev\SnakeGameSDL2\SnakeGame\SnakeGame\BoardTile.h(2,10): error C1083: Cannot open include file: 'SDL_image.h': No such file or directory
+  (compiling source file 'BoardTile.cpp')
+  
+  Game.cpp
+D:\dev\SnakeGameSDL2\SnakeGame\SnakeGame\Game.h(3,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'Game.cpp')
+  
+  InputManager.cpp
+D:\dev\SnakeGameSDL2\SnakeGame\SnakeGame\InputManager.h(2,10): error C1083: Cannot open include file: 'SDL_events.h': No such file or directory
+  (compiling source file 'InputManager.cpp')
+  
+  AppleSpawner.cpp
+D:\dev\SnakeGameSDL2\SnakeGame\SnakeGame\Singletons.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'AppleSpawner.cpp')
+  
+  ItemTemplate.cpp
+D:\dev\SnakeGameSDL2\SnakeGame\SnakeGame\Singletons.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'ItemTemplate.cpp')
+  
+  main.cpp
+D:\dev\SnakeGameSDL2\SnakeGame\SnakeGame\Game.h(3,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'main.cpp')
+  
+  Singletons.cpp
+D:\dev\SnakeGameSDL2\SnakeGame\SnakeGame\Singletons.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'Singletons.cpp')
+  
+  Snake.cpp
+D:\dev\SnakeGameSDL2\SnakeGame\SnakeGame\Singletons.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'Snake.cpp')
+  
+  SnakeBodyPart.cpp
+D:\dev\SnakeGameSDL2\SnakeGame\SnakeGame\Singletons.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'SnakeBodyPart.cpp')
+  
+  SnakeMovement.cpp
+D:\dev\SnakeGameSDL2\SnakeGame\SnakeGame\InputManager.h(2,10): error C1083: Cannot open include file: 'SDL_events.h': No such file or directory
+  (compiling source file 'SnakeMovement.cpp')
+  
+  TextureManager.cpp
+D:\dev\SnakeGameSDL2\SnakeGame\SnakeGame\TextureManager.h(5,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'TextureManager.cpp')
+  
+  Generating Code...

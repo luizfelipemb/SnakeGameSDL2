@@ -1,0 +1,14 @@
+D:\dev\SnakeGameSDL2\Core\Source\AppleItem.cpp;D:\dev\SnakeGameSDL2\Binaries\Intermediates\Debug-windows-x86_64\Core\AppleItem.obj
+D:\dev\SnakeGameSDL2\Core\Source\AppleSpawner.cpp;D:\dev\SnakeGameSDL2\Binaries\Intermediates\Debug-windows-x86_64\Core\AppleSpawner.obj
+D:\dev\SnakeGameSDL2\Core\Source\BoardBrain.cpp;D:\dev\SnakeGameSDL2\Binaries\Intermediates\Debug-windows-x86_64\Core\BoardBrain.obj
+D:\dev\SnakeGameSDL2\Core\Source\BoardRenderer.cpp;D:\dev\SnakeGameSDL2\Binaries\Intermediates\Debug-windows-x86_64\Core\BoardRenderer.obj
+D:\dev\SnakeGameSDL2\Core\Source\BoardTile.cpp;D:\dev\SnakeGameSDL2\Binaries\Intermediates\Debug-windows-x86_64\Core\BoardTile.obj
+D:\dev\SnakeGameSDL2\Core\Source\Game.cpp;D:\dev\SnakeGameSDL2\Binaries\Intermediates\Debug-windows-x86_64\Core\Game.obj
+D:\dev\SnakeGameSDL2\Core\Source\InputManager.cpp;D:\dev\SnakeGameSDL2\Binaries\Intermediates\Debug-windows-x86_64\Core\InputManager.obj
+D:\dev\SnakeGameSDL2\Core\Source\ItemTemplate.cpp;D:\dev\SnakeGameSDL2\Binaries\Intermediates\Debug-windows-x86_64\Core\ItemTemplate.obj
+D:\dev\SnakeGameSDL2\Core\Source\Singletons.cpp;D:\dev\SnakeGameSDL2\Binaries\Intermediates\Debug-windows-x86_64\Core\Singletons.obj
+D:\dev\SnakeGameSDL2\Core\Source\Snake.cpp;D:\dev\SnakeGameSDL2\Binaries\Intermediates\Debug-windows-x86_64\Core\Snake.obj
+D:\dev\SnakeGameSDL2\Core\Source\SnakeBodyPart.cpp;D:\dev\SnakeGameSDL2\Binaries\Intermediates\Debug-windows-x86_64\Core\SnakeBodyPart.obj
+D:\dev\SnakeGameSDL2\Core\Source\SnakeMovement.cpp;D:\dev\SnakeGameSDL2\Binaries\Intermediates\Debug-windows-x86_64\Core\SnakeMovement.obj
+D:\dev\SnakeGameSDL2\Core\Source\TextureManager.cpp;D:\dev\SnakeGameSDL2\Binaries\Intermediates\Debug-windows-x86_64\Core\TextureManager.obj
+D:\dev\SnakeGameSDL2\Core\Source\main.cpp;D:\dev\SnakeGameSDL2\Binaries\Intermediates\Debug-windows-x86_64\Core\main.obj

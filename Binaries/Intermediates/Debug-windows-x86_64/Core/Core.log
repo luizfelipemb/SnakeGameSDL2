@@ -1,0 +1,68 @@
+﻿  AppleItem.cpp
+D:\dev\SnakeGameSDL2\Core\Source\Singletons.h(24,26): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'Source/AppleItem.cpp')
+  
+  AppleSpawner.cpp
+D:\dev\SnakeGameSDL2\Core\Source\Singletons.h(24,26): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'Source/AppleSpawner.cpp')
+  
+  BoardBrain.cpp
+D:\dev\SnakeGameSDL2\Core\Source\Singletons.h(24,26): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'Source/BoardBrain.cpp')
+  
+D:\dev\SnakeGameSDL2\Core\Source\BoardBrain.h(27,58): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+  (compiling source file 'Source/BoardBrain.cpp')
+  
+  BoardRenderer.cpp
+D:\dev\SnakeGameSDL2\Core\Source\Singletons.h(24,26): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'Source/BoardRenderer.cpp')
+  
+D:\dev\SnakeGameSDL2\Core\Source\BoardRenderer.cpp(11,37): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\dev\SnakeGameSDL2\Core\Source\BoardRenderer.cpp(11,21): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  BoardTile.cpp
+D:\dev\SnakeGameSDL2\Core\Source\Singletons.h(24,26): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'Source/BoardTile.cpp')
+  
+  Game.cpp
+D:\dev\SnakeGameSDL2\Core\Source\Singletons.h(24,26): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'Source/Game.cpp')
+  
+D:\dev\SnakeGameSDL2\Core\Source\BoardBrain.h(27,58): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+  (compiling source file 'Source/Game.cpp')
+  
+  InputManager.cpp
+  ItemTemplate.cpp
+D:\dev\SnakeGameSDL2\Core\Source\Singletons.h(24,26): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'Source/ItemTemplate.cpp')
+  
+  Singletons.cpp
+D:\dev\SnakeGameSDL2\Core\Source\Singletons.h(24,26): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'Source/Singletons.cpp')
+  
+  Snake.cpp
+D:\dev\SnakeGameSDL2\Core\Source\Singletons.h(24,26): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'Source/Snake.cpp')
+  
+D:\dev\SnakeGameSDL2\Core\Source\Snake.cpp(15,79): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  SnakeBodyPart.cpp
+D:\dev\SnakeGameSDL2\Core\Source\Singletons.h(24,26): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'Source/SnakeBodyPart.cpp')
+  
+  SnakeMovement.cpp
+D:\dev\SnakeGameSDL2\Core\Source\Singletons.h(24,26): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'Source/SnakeMovement.cpp')
+  
+  TextureManager.cpp
+D:\dev\SnakeGameSDL2\Core\Source\TextureManager.cpp(40,16): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+D:\dev\SnakeGameSDL2\Core\Source\TextureManager.cpp(41,16): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+D:\dev\SnakeGameSDL2\Core\Source\TextureManager.cpp(57,16): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+D:\dev\SnakeGameSDL2\Core\Source\TextureManager.cpp(58,16): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+  main.cpp
+D:\dev\SnakeGameSDL2\Core\Source\Singletons.h(24,26): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'Source/main.cpp')
+  
+D:\dev\SnakeGameSDL2\Core\Source\BoardBrain.h(27,58): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+  (compiling source file 'Source/main.cpp')
+  
+  Generating Code...
+  Core.vcxproj -> D:\dev\SnakeGameSDL2\Binaries\Debug-windows-x86_64\Core\Core.exe
